@@ -1,7 +1,2 @@
 #!/bin/bash
-
-input_file=$CFILE
-
-output_file="c"
-
-cpp -P "$input_file" -o "$output_file"
+cpp -P "$CFILE" -o c
