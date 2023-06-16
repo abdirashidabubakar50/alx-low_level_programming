@@ -20,7 +20,7 @@ int main(void)
 	n = rand() - RAND_MAX / 2;
 
 	/* Extract the last digit of n */
-	lastDigit = abs(n) % 10;
+	lastDigit = n % 10;
 
 	/* Print the output based on the last digit */
 	printf("Last digit of %d is %d ", n, lastDigit);
