@@ -17,7 +17,7 @@ int main(void)
 
 	/* Generate a random number and store it in n */
 	srand(time(0));
-	n = rand();
+	n = rand() - RAND_MAX / 2;
 
 	/* Extract the last digit of n */
 	lastDigit = abs(n) % 10;
