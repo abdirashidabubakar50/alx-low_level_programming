@@ -3,8 +3,8 @@
 /**
  * main - Entry point
  *
- * Description: Prints all the numbers in base 16 (hexadecimal)
- *              in lowercase using the putchar function.
+ * Description: Prints all possible combinations of single-digit numbers
+ *              separated by ", " in ascending order using putchar.
  *
  * Return: Always 0 (Success)
  */
@@ -12,12 +12,15 @@ int main(void)
 {
 	int i;
 
-	for (i = 0; i < 16; i++)
+	for (i = 0; i < 10; i++)
 	{
-		if (i < 10)
-			putchar('0' + i);
-		else
-			putchar('a' + i - 10);
+		putchar('0' + i);
+
+		if (i != 9)
+		{
+			putchar(',');
+			putchar(' ');
+		}
 	}
 
 	putchar('\n');
