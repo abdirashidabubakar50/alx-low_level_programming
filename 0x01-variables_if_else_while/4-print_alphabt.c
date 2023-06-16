@@ -11,17 +11,20 @@
  */
 int main(void)
 {
-    char letter;
+	char letter;
 
-    /* Print lowercase alphabet excluding 'q' and 'e' */
-    for (letter = 'a'; letter <= 'z'; letter++)
-    {
-        if (letter != 'q' && letter != 'e')
-            putchar(letter);
-    }
+	/* Print lowercase alphabet excluding 'q' and 'e' */
+	for (letter = 'a'; letter <= 'z'; letter++)
+	{
+		if (letter != 'q' && letter != 'e')
+		{
+			putchar(letter);
+		}
+	}
 
-    /* Print new line */
-    putchar('\n');
+	/* Print new line */
+	putchar('\n');
 
-    return 0;
+	return (0);
 }
+
