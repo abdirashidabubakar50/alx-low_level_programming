@@ -10,9 +10,9 @@
  */
 int main(void)
 {
-  char letter  =  'a';
+	char letter = 'a';
 
-	for (letter  =  'z'; letter >= 'a'; letter--)
+	for (letter = 'z'; letter >= 'a'; letter--)
 	{
 		putchar(letter);
 	}
@@ -21,3 +21,4 @@ int main(void)
 
 	return (0);
 }
+
