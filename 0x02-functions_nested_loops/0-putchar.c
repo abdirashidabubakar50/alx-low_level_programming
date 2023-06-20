@@ -1,7 +1,18 @@
 #include "main.h"
 
 /**
- * print_alphabet - Prints the string "_putchar" using _putchar function
+ * main - Entry point of the program
+ *
+ * Return: Always 0 (Success)
+ */
+int main(void)
+{
+	print_putchar();
+	return (0);
+}
+
+/**
+ * print_putchar - Prints the string "_putchar" using _putchar function
  *
  * Return: Always 0 (Success)
  */
