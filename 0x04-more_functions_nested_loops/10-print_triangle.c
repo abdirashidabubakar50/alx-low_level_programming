@@ -8,6 +8,11 @@ void print_triangle(int size)
 {
 	int row, column;
 
+	if (size <= 0)
+	{
+		_putchar('\n');
+	}
+
 	/* for each row*/
 	for (row = 0; row < size; row++)
 	{
