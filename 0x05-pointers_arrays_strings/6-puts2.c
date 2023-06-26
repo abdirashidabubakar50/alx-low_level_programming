@@ -18,12 +18,11 @@ void puts2(char *str)
 	}
 
 	/*print every character in the string*/
-	i = 0;
 	j = length - 1;
-	while (i < j)
+	for (i = 0; i < j || (i == j && i % 2 != 0); i += 2)
 	{
 		_putchar(str[i]);
-		i += 2;
+
 	}
 	_putchar('\n');
 }
