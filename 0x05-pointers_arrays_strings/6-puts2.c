@@ -19,7 +19,7 @@ void puts2(char *str)
 
 	/*print every character in the string*/
 	j = length - 1;
-	for (i = 0; i < j || (i == j && i % 2 != 0); i += 2)
+	for (i = 0; i < j || (i == j && i % 2 != 0 && i == '.'); i += 2)
 	{
 		_putchar(str[i]);
 
