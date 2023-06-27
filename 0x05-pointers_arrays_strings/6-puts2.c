@@ -10,7 +10,7 @@ void puts2(char *str)
 {
 	/* get the lenth of the string*/
 	int length = 0;
-	int i, j;
+	int i = 0;
 
 	while (str[length] != '\0')
 	{
@@ -18,10 +18,10 @@ void puts2(char *str)
 	}
 
 	/*print every character in the string*/
-	j = length - 1;
-	for (i = 0; i < j || (i == j && i % 2 != 0 && str[i] == '.'); i += 2)
+	while (str[i] != '\0')
 	{
 		_putchar(str[i]);
+		i += 2;
 
 	}
 	_putchar('\n');
