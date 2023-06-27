@@ -21,8 +21,9 @@ char *generate_password(void)
 	}
 
 	srand(time(NULL));
-
-	for (int i = 0; i < PASSWORD_LENGTH; i++)
+	int i;
+	
+	for (i = 0; i < PASSWORD_LENGTH; i++)
 	{
 		int random_num = rand() % 94;  /* Generate a random number between 0 and 93 */
 		password[i] = random_num + 33; /* Convert the random number to an ASCII character between '!' and '~' */
