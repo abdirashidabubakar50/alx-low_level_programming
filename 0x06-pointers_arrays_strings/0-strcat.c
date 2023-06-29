@@ -3,9 +3,9 @@
 /**
  *  *_strcat - a function that concatenates two strings
  *  @dest: The destinations string
- *  @src: The source string 
- * 
- * Return: poınter to the resultıng strıng dest
+ *  @src: The source string
+ *
+ *  Return: poınter to the resultıng strıng dest
 */
 char *_strcat(char *dest, char *src)
 {
@@ -13,7 +13,7 @@ char *_strcat(char *dest, char *src)
 	int i;
 
 	/*determine the length of the destination string*/
-	while(dest[length_dest] != '\0')
+	while (dest[length_dest] != '\0')
 	{
 		length_dest++;
 	}
