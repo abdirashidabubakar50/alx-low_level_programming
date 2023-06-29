@@ -4,7 +4,7 @@
  *  *_strncpy - a function that copies a string
  *  @dest: The destinations string
  *  @src: The source string
- * @n: The maximum number of bytes to copy from src
+ *  @n: The maximum number of bytes to copy from src
  *
  *  Return: poınter to the resultıng strıng dest
 */
