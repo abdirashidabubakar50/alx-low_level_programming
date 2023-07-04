@@ -2,7 +2,6 @@
 
 #define NULL ((void *)0)
 
-
 /**
  *  _strchr - function that locates a certain character in a string
  *  @s: The string in which the character is going to be located from
@@ -10,7 +9,7 @@
  *
  *  Return: returns a pointer to the first occurence of the character
  *           in the string or NULL if the character is not found
-*/
+ */
 
 char *_strchr(char *s, char c)
 {
