@@ -11,13 +11,13 @@
  */
 int _sqrt_recursion_helper(int n, int start, int end)
 {
-	int mid;
+	int mid, square;
 
 	if (start > end)
 		return (-1); /* The number does not have a natural square root */
 
 	mid = (start + end) / 2;
-	int square = mid * mid;
+	square = mid * mid;
 
 	if (square == n)
 		return (mid); /* Found the exact square root */
