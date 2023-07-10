@@ -14,7 +14,19 @@
 
 int main(int argc, char *argv[])
 {
-	int arguments = atoi(argv[argc + 1]);
-	printf("%d\n", arguments);
+	int i, argument;
+	i = 1;
+	if  (i == 0)
+	{
+		argument = atoi(argv[i]);
+		printf("%d\n", argument);
+
+	}
+	else
+	{
+		printf("%d\n", argc - 1);
+	}
+
+
 	return (0);
 }
