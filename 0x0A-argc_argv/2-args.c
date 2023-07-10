@@ -7,9 +7,10 @@
  * @argc: the number of command-line arguments
  * @argv: The pointer to the array of the command-line arguments
  *
+ * Return: 0 on success
 */
 
-int main (int argc, char *argv[])
+int main(int argc, char *argv[])
 {
 	int i;
 
