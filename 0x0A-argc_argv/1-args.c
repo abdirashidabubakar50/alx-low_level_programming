@@ -15,7 +15,9 @@
 int main(int argc, char *argv[])
 {
 	int i, argument;
+
 	i = 1;
+
 	if  (i == 0)
 	{
 		argument = atoi(argv[i]);
@@ -26,7 +28,5 @@ int main(int argc, char *argv[])
 	{
 		printf("%d\n", argc - 1);
 	}
-
-
 	return (0);
 }
