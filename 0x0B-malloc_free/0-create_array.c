@@ -21,7 +21,7 @@ char *create_array(unsigned int size, char c)
 	}
 
 	/* Allocate memory for the array*/
-	array = malloc((size + 1) * sizeof(char));
+	array = malloc((size) * sizeof(char));
 
 	if (array == NULL)
 	{
