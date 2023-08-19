@@ -4,11 +4,12 @@
 */
 void times_table(void)
 {
-    int i;
-    int j;
+	int i;
+	int j;
 	int answer;
-    for (i = 0; i <= 9; i++)
-    {
+
+	for (i = 0; i <= 9; i++)
+	{
 		for (j = 0; j <= 9; j++)
 		{
 			answer = i * j;
@@ -21,7 +22,7 @@ void times_table(void)
 			else
 			{
 				_putchar(' ');
-				_putchar(answer +'0');
+				_putchar(answer + '0');
 			}
 			if (j < 9)
 			{
@@ -31,5 +32,5 @@ void times_table(void)
 		}
 		_putchar(' ');
 		_putchar('\n');
-    }
+	}
 }
