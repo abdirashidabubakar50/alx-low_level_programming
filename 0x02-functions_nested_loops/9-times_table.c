@@ -19,6 +19,10 @@ void times_table(void)
 				_putchar((answer / 10) + '0');
 				_putchar((answer % 10) + '0');
 			}
+			else if (j == 0)
+			{
+				_putchar(answer + '0');
+			}
 			else
 			{
 				_putchar(' ');
