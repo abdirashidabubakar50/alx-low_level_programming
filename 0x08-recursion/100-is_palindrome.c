@@ -1,4 +1,12 @@
 #include "main.h"
+int string_length(char *s)
+{
+	if (*s == '\0')
+	{
+		return (0);
+	}
+	return (1 + string_length(s + 1));
+}
 /**
  * is_palindrome_helper - a helper function that returns 1
  * if a string is a palindrome and o if not
@@ -28,13 +36,7 @@ int is_palindrome_helper(char *s, int start, int end)
 */
 int is_palindrome(char *s)
 {
-	int len = 0;
-
-	while (s[len] != '\0')
-	{
-		len++;
-	}
-
+	int len = string_length(s);
 	if (len == 0)
 	{
 		return (1);
