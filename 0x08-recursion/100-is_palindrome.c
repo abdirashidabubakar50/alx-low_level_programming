@@ -1,4 +1,9 @@
 #include "main.h"
+/**
+ * string_length - function that calculates the length of a string
+ * @s: the string of which lenght is to be calculated
+ * Return: returns the length of the string
+*/
 int string_length(char *s)
 {
 	if (*s == '\0')
@@ -37,6 +42,7 @@ int is_palindrome_helper(char *s, int start, int end)
 int is_palindrome(char *s)
 {
 	int len = string_length(s);
+
 	if (len == 0)
 	{
 		return (1);
