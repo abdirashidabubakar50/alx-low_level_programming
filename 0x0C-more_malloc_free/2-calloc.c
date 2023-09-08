@@ -4,7 +4,6 @@
  * _calloc - function allocates memory for an array and initialize it to 0
  * @nmemb: Number of elements in the array
  * @size: size in bytes of each element
- * 
  * Return: Pointer to the allocated memory (initialized to zero).
  *         NULL if nmemb or size is 0 or if malloc fails.
 */
@@ -36,5 +35,4 @@ void *_calloc(unsigned int nmemb, unsigned int size)
 		array[i] = 0;
 	}
 	return (ar);
-
 }
