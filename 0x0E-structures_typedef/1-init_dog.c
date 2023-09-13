@@ -17,6 +17,7 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 
 	if (d == NULL || name == NULL || owner == NULL)
 	{
+		return (NULL);
 		exit(1);
 	}
 	/*calculate the length of the name and owner string*/
