@@ -11,13 +11,14 @@
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	int name_length = 0;
-	int owner_length = 0;
-	int i;
+	int name_length = 0, owner_length = 0, i; 
 
-	if (d == NULL || name == NULL || owner == NULL)
+	if (d == NULL)
 	{
-		return (NULL);
+		exit(1);
+	}
+	if (name == NULL || owner == NULL)
+	{
 		exit(1);
 	}
 	/*calculate the length of the name and owner string*/
