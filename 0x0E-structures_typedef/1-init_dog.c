@@ -11,7 +11,7 @@
 */
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-	int name_length = 0, owner_length = 0, i; 
+	int name_length = 0, owner_length = 0, i;
 
 	if (d == NULL)
 	{
@@ -21,7 +21,6 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	{
 		exit(1);
 	}
-	/*calculate the length of the name and owner string*/
 	while (name[name_length] != '\0')
 	{
 		name_length++;
@@ -35,12 +34,10 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	{
 		exit(1);
 	}
-
 	for (i = 0; i <= name_length; i++)
 	{
 		d->name[i] = name[i];
 	}
-
 	d->owner = malloc(owner_length + 1);
 	if (d == NULL)
 	{
@@ -51,6 +48,5 @@ void init_dog(struct dog *d, char *name, float age, char *owner)
 	{
 		d->owner[i] = owner[i];
 	}
-
 	d->age = age;
 }
