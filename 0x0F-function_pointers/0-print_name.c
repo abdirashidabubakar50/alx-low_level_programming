@@ -1,5 +1,11 @@
 #include "function_pointers.h"
 #include <stdlib.h>
+#include <unistd.h>
+
+int _putchar(char c)
+{
+	return(write(1, &c, 1));
+}
 /**
  * nam - a function which prints given name
  * @name: the name to be printed
