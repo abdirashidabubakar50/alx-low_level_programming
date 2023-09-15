@@ -1,10 +1,14 @@
 #include "function_pointers.h"
 #include <stdlib.h>
 #include <unistd.h>
-
+/**
+ * _putchar - function that prints a character to the std ouptut
+ * @c: the character to be printed
+ * Return: returns the printed character
+*/
 int _putchar(char c)
 {
-	return(write(1, &c, 1));
+	return (write(1, &c, 1));
 }
 /**
  * nam - a function which prints given name
@@ -13,6 +17,7 @@ int _putchar(char c)
 void nam(char *name)
 {
 	int i = 0;
+
 	for (i = 0; name[i] != '\0'; i++)
 	{
 		_putchar(name[i]);
@@ -26,7 +31,7 @@ void nam(char *name)
 */
 void print_name(char *name, void (*f)(char *))
 {
-	if(f == NULL)
+	if (f == NULL)
 	{
 		exit(1);
 	}
