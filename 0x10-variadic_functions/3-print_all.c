@@ -27,13 +27,13 @@ void print_float(va_list args) { printf("%f", va_arg(args, double)); }
  */
 void print_strings(const char *separator, unsigned int n, ...)
 {
-	unsigned int i;
+	unsigned int i = 0;
 	char *str;
 	va_list args;
 
 	va_start(args, n);
 
-	for (i = 0; i < n; i++)
+	while (i < n)
 	{
 		str = va_arg(args, char *);
 		if (str == NULL)
@@ -48,6 +48,7 @@ void print_strings(const char *separator, unsigned int n, ...)
 		{
 			printf("%s", separator);
 		}
+		i++;
 	}
 	printf("\n");
 }
