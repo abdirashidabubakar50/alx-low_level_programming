@@ -59,12 +59,12 @@ void print_strings(const char *separator, unsigned int n, ...)
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i;
+	unsigned int i = 0;
 	va_list args;
 
 	va_start(args, format);
 
-	for (i = 0; format && format[i]; i++)
+	while(format && format[i])
 	{
 		if (format[i] == 'c')
 		{
