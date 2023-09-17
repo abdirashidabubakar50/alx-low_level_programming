@@ -30,7 +30,8 @@ void print_opcodes(int bytes)
  * @argc: The number of command-line arguments.
  * @argv: An array of pointers to the arguments.
  *
- * Return: 0 on success, 1 on incorrect number of arguments, and 2 on negative byte count.
+ * Return: 0 on success, 1 on incorrect number of arguments,
+ *                and 2 on negative byte count.
  */
 int main(int argc, char *argv[])
 {
@@ -41,6 +42,7 @@ int main(int argc, char *argv[])
 	}
 
 	int bytes = atoi(argv[1]);
+
 	print_opcodes(bytes);
 
 	return (0);
