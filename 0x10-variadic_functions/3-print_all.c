@@ -1,57 +1,6 @@
-#include "variadic_functions.h"
 #include <stdio.h>
 #include <stdarg.h>
-
-const char *separator = "";
-/**
- * print_char - Prints a character.
- * @args: A va_list containing the character to print.
- */
-void print_char(va_list args) 
-{ 
-	printf("%c",va_arg(args, int));
-}
-/**
- * print_int - Prints an integer.
- * @args: A va_list containing the integer to print.
- */
-void print_int(va_list args) { printf("%d", va_arg(args, int)); }
-/**
- * print_float - Prints a float.
- * @args: A va_list containing the float to print.
- */
-void print_float(va_list args) { printf("%f", va_arg(args, double)); }
-/**
- * print_string - Prints a string or "(nil)" if it's NULL.
- * @args: A va_list containing the string to print.
- */
-void print_strings(const char *separator, unsigned int n, ...)
-{
-	unsigned int i = 0;
-	char *str;
-	va_list args;
-
-	va_start(args, n);
-
-	while (i < n)
-	{
-		str = va_arg(args, char *);
-		if (str == NULL)
-		{
-			printf("(nil)");
-		}
-		else
-		{
-			printf("%s", str);
-		}
-		if (separator != NULL && i < n - 1)
-		{
-			printf("%s", separator);
-		}
-		i++;
-	}
-	printf("\n");
-}
+#include "variadic_functions.h"
 
 /**
  * print_all - Prints anything based on the format string.
@@ -60,35 +9,39 @@ void print_strings(const char *separator, unsigned int n, ...)
  */
 void print_all(const char * const format, ...)
 {
-	unsigned int i = 0;
 	va_list args;
+	int i = 0;
+	char *separator = "";
+	char *str;
 
 	va_start(args, format);
 
-	while(format && format[i])
+	while (format && format[i])
 	{
 		if (format[i] == 'c')
 		{
-			printf("%s",separator);
-			print_char(args);
+			printf("%s%c", separator, va_arg(args, int));
 		}
 		else if (format[i] == 'i')
 		{
-			printf("%s",separator);
-			print_int(args);
+			printf("%s%d", separator, va_arg(args, int));
 		}
 		else if (format[i] == 'f')
 		{
-			printf("%s",separator);
-			print_float(args);
+			printf("%s%f", separator, va_arg(args, double));
 		}
 		else if (format[i] == 's')
 		{
-			print_strings("; ",1,args);
+			str = va_arg(args, char *);
+			if (str == NULL)
+				printf("%s(nil)", separator);
+			else
+				printf("%s%s", separator, str);
 		}
 		separator = ", ";
 		i++;
 	}
+
 	va_end(args);
 	printf("\n");
 }
