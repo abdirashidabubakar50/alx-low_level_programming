@@ -6,7 +6,8 @@
  * @width: The width of the grid.
  * @height: The height of the grid.
  *
- * Return: A pointer to the 2-dimensional array of integers, or NULL on failure.
+ * Return: A pointer to the 2-dimensional array of integers,
+ * or NULL on failure.
  */
 int **alloc_grid(int width, int height)
 {
@@ -14,11 +15,11 @@ int **alloc_grid(int width, int height)
 	int i, j;
 
 	if (width <= 0 || height <= 0)
-		return NULL;
+		return (NULL);
 
 	grid = (int **)malloc(sizeof(int *) * height);
 	if (grid == NULL)
-		return NULL;
+		return (NULL);
 
 	for (i = 0; i < height; i++)
 	{
@@ -28,11 +29,11 @@ int **alloc_grid(int width, int height)
 			for (j = 0; j < i; j++)
 				free(grid[j]);
 			free(grid);
-			return NULL;
+			return (NULL);
 		}
 		for (j = 0; j < width; j++)
 			grid[i][j] = 0;
 	}
 
-	return grid;
+	return (grid);
 }
