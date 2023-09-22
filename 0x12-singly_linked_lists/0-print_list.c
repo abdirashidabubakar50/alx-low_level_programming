@@ -3,7 +3,7 @@
 /**
  * print_list - function that prints all the elements of a list_t elements
  * @h:pointer to the head of the list
- * 
+ *
  * Return: the number of nodes
 */
 size_t print_list(const list_t *h)
@@ -24,5 +24,5 @@ size_t print_list(const list_t *h)
 		h = h->next;
 		node_count++;
 	}
-	return node_count;
+	return (node_count);
 }
