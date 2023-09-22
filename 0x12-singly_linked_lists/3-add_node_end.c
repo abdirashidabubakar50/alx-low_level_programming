@@ -35,15 +35,15 @@ list_t *add_node_end(list_t **head, const char *str)
 	}
 	else
 	{
-		list_t *current;
+		list_t *temp;
 
-		current = *head;
+		temp = *head;
 
-		while (current->next != NULL)
+		while (temp->next != NULL)
 		{
-			current = current->next;
+			temp = temp->next;
 		}
-		current->next = new_node;
+		temp->next = new_node;
 	}
 	return (new_node);
 }
