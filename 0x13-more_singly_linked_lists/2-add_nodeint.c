@@ -7,16 +7,17 @@
  * add_nodeint - function that adds a new node
  *               at the beginning of a listint_t list
  * @head: pointer to a pointer that points at the head of listint_t list
- * 
+ * @n: the integer to be stored in the new node
+ *
  * Return: returns updated listint_t list
 */
 listint_t *add_nodeint(listint_t **head, const int n)
 {
 	listint_t *new_node;
 
-	if(head == NULL)
+	if (head == NULL)
 	{
-		return(NULL);
+		return (NULL);
 	}
 
 	new_node = malloc(sizeof(listint_t));
