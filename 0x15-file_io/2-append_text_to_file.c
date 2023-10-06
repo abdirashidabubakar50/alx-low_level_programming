@@ -11,7 +11,7 @@ int append_text_to_file(const char *filename, char *text_content)
 {
 	FILE *file;
 
-	if (filename == NULL || text_content == NULL)
+	if (filename == NULL)
 	{
 		return (-1);
 	}
@@ -20,11 +20,13 @@ int append_text_to_file(const char *filename, char *text_content)
 	{
 		return (-1);
 	}
-
-	if (fputs(text_content, file) == EOF)
+	if (text_content != NULL)
 	{
-		fclose(file);
-		return (-1);
+		if (fputs(text_content, file) == EOF)
+		{
+			fclose(file);
+			return (-1);
+		}
 	}
 
 	fclose(file);
