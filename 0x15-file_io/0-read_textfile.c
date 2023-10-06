@@ -40,9 +40,7 @@ size_t read_textfile(const char *filename, size_t letters)
 		}
 		bytes_read = fread(file_content, 1, bytes_to_read, file);
 		if (bytes_read == 0)
-		{
 			break;
-		}
 		fwrite(file_content, 1, bytes_read, stdout);
 		letters -= bytes_read;
 		total_written += bytes_read;
