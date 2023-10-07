@@ -11,7 +11,8 @@
 */
 int main(int argc, char *argv[])
 {
-	const char *file_from, *file_to, buffer[BUFFER_SIZE];
+	const char *file_from, *file_to;
+	char buffer[BUFFER_SIZE];
 	FILE *source_file, *dest_file;
 	size_t bytes_read, bytes_written;
 
